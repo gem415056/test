@@ -1636,7 +1636,7 @@
                 .crm-btn-p {
                     padding: 8px 16px;
                     border-radius: 8px;
-                    border: 1px solid #bfdca4 !important;
+                    border: 1px solid #ddd !important;
                     background: #bfdca4 !important;
                     color: #333 !important;
                     cursor: pointer;
@@ -1652,7 +1652,7 @@
                 }
                 .crm-btn-p:hover {
                     background: #b0d294 !important;
-                    border-color: #b0d294 !important;
+                    border-color: #ddd !important;
                     color: #333 !important;
                 }
 
