@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         크랙 9 in 1 통합팩 (V15.3.0 - 요약 변경 알림 모듈 추가 및 최적화 배치)
+// @name         크랙 9 in 1 통합팩 (V15.4.0 - 요약 변경 알림 모듈 추가 및 최적화 배치)
 // @namespace    https://crack.wrtn.ai/
-// @version      15.3.0
+// @version      15.4.0
 // @description  텍스트 입력창 텍스트 크기 수정 
 // @author       User & Gemini (수정)
 // @match        https://crack.wrtn.ai/*
@@ -1983,7 +1983,7 @@
         sendBtn.style.cssText = `
             display: inline-flex; align-items: center; justify-content: center;
             border-radius: 6px; font-size: 12px; font-weight: 600;
-            border: none; background-color: #D5C2DE;
+            border: 1px solid rgba(128,128,128,0.2); background-color: #D5C2DE;
             color: #000000; cursor: pointer; width: 52px; height: 24px; box-sizing: border-box;
             transition: opacity 0.15s ease;
         `;
