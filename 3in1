@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         크랙 AI요약 & 북마크 & 키워드노트 통합본 (3 in 1)
 // @namespace    https://crack.wrtn.ai/
-// @version      4.7.2
+// @version      4.7.3
 // @description  키워드노트 실시간 동기화 + 삭제 명령어 제거 + 모듈별 독립 커스텀 색상(북마크 연노랑, 요약 연분홍) 완벽 적용 + 알리미 스타일 알림 토스트 연동 (중앙 101px 위)
 // @author       Assistant
 // @match        https://crack.wrtn.ai/*
@@ -135,7 +135,7 @@
                 .cbm-folders::-webkit-scrollbar { height: 4px; }
                 .cbm-folders::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
                 .cbm-ftab { height: 28px; background: #f0f0f0; border: 1px solid #ddd; padding: 0 12px; border-radius: 14px; font-size: 12px; font-weight: 600; color: #555; cursor: pointer; white-space: nowrap; display: inline-flex; align-items: center; box-sizing: border-box; }
-                .cbm-ftab.active { background: ${ACCENT_COLOR}; color: #333; border-color: ${ACCENT_COLOR}; }
+                .cbm-ftab.active { background: ${ACCENT_COLOR}; color: #333; border-color: #ddd; }
                 .cbm-fadd { background: none; border: 1px dashed #aaa; border-radius: 50%; width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; color: #666; font-weight: bold; box-sizing: border-box; margin: 0; padding: 0; }
                 .cbm-search-row { display: flex; gap: 5px; margin-bottom: 12px; align-items: stretch; }
                 .cbm-search { flex: 1; padding: 8px 12px; min-height: 36px; border: 1px solid #ddd !important; border-radius: 8px; font-size: 13px; box-sizing: border-box; background: #fff !important; color: #222 !important; margin: 0 !important; }
@@ -175,7 +175,7 @@
                 body[data-theme="dark"] .cbm-tabs-container { border-bottom-color: #444; }
                 body[data-theme="dark"] .cbm-pal-btn.active { border-color: #fff; }
                 body[data-theme="dark"] .cbm-ftab { background: #141413; border-color: #42413D; color: #ccc; }
-                body[data-theme="dark"] .cbm-ftab.active { background: ${ACCENT_COLOR}; color: #333; border-color: ${ACCENT_COLOR}; }
+                body[data-theme="dark"] .cbm-ftab.active { background: ${ACCENT_COLOR}; color: #333; border-color: #42413D; }
                 body[data-theme="dark"] .cbm-search { background: #141413 !important; border-color: #42413D !important; color: #F0EFEB !important; }
                 body[data-theme="dark"] #cbm-toggle-move, body[data-theme="dark"] #cbm-toggle-del { background: #141413; border-color: #42413D; color: #ccc; }
                 body[data-theme="dark"] #cbm-toggle-move.active { background: ${ACCENT_COLOR}; color: #333; border-color: ${ACCENT_COLOR}; }
@@ -948,7 +948,7 @@
                 <div class="ckw-kw-item" id="ckw-always-item" data-id="always">
                     <div class="ckw-kw-head">
                         <span class="ckw-caret">></span>
-                        <span class="ckw-kw-name">상시 노트</span>
+                        <span class="ckw-kw-name">유저노트</span>
                     </div>
                     <div class="ckw-kw-body">
                         <textarea id="ckw-always-ta" class="ckw-ta" placeholder="키워드가 없을 때 상시로 들어갈 내용"></textarea>
@@ -1523,7 +1523,7 @@
 
                 .crack-ext-ai-mbtn { padding:10px 20px; border-radius:8px; border:1px solid #ddd !important; background:#eee !important; color:#333 !important; cursor:pointer; font-size:13px; font-weight:600; transition: background 0.2s;}
                 .crack-ext-ai-mbtn:hover { background: #ddd !important; }
-                .crack-ext-ai-mbtn-p { background:${ACCENT_COLOR} !important; color:#333 !important; border-color:${ACCENT_COLOR} !important; }
+                .crack-ext-ai-mbtn-p { background:${ACCENT_COLOR} !important; color:#333 !important; border-color:#ddd !important; }
                 .crack-ext-ai-mbtn-p:hover { filter: brightness(0.9); background: ${ACCENT_COLOR} !important;}
 
                 .crack-flex-ai-row { display:flex; gap:12px; margin-bottom: 12px; }
@@ -1551,7 +1551,7 @@
                 body[data-theme="dark"] .crack-ext-session-content { color: #ccc !important; }
                 body[data-theme="dark"] .crack-ext-ai-mbtn { background: #333 !important; color: #eee !important; border-color: #42413D !important; }
                 body[data-theme="dark"] .crack-ext-ai-mbtn:hover { background: #444 !important; }
-                body[data-theme="dark"] .crack-ext-ai-mbtn-p { background: ${ACCENT_COLOR} !important; color: #333 !important; border-color: ${ACCENT_COLOR} !important; }
+                body[data-theme="dark"] .crack-ext-ai-mbtn-p { background: ${ACCENT_COLOR} !important; border-color: #42413D !important; color: #333 !important; }
                 body[data-theme="dark"] #ce-ai-card-nav button { background: #141413 !important; border-color: #42413D !important; color: #F0EFEB !important; }
             `;
             document.head.appendChild(s);
